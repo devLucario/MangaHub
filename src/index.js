@@ -8,7 +8,7 @@ const logoutRoute = require("../routes/logout")
 const PORT = process.env.PORT || 3000
 const Base_URL = process.env.Base_URL
 
-const mongoUri = "mongodb://localhost:27017/Profile_proj"
+const mongoUri = process.env.MongoURI
 const mongoConn = require("../db/conn")
 mongoConn.connect()
 

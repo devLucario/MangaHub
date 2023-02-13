@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const mongoUri = "mongodb://localhost:27017/Profile_proj"
+const mongoUri = process.env.MongoURI
 mongoose.set('strictQuery', true);
 // mongoose.connect(mongoUri,{useNewUrlParser: true,useUnifiedTopology: true}).then(()=>{console.log(`mongoose connected`)}).catch((e)=>{console.log(e)})
 exports.connect = async function() {
