@@ -5,6 +5,7 @@ const mongoSession = require("connect-mongodb-session")(session)
 const loginRoute = require("../routes/login")
 const signupRoute = require("../routes/signup")
 const logoutRoute = require("../routes/logout")
+require("dotenv").config()
 const PORT = process.env.PORT || 3000
 const Base_URL = process.env.Base_URL
 
