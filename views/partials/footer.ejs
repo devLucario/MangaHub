@@ -1,0 +1,104 @@
+<body>
+    <div class="footer">
+        <div class="row">
+            <div class="col">
+                <h3>MANGAHUB</h3>
+                MangaHub is an online platform which allow people to publish and access all kinds of manga, comics and web novels. Mangadex holds no responsibilty to any of the works published or presented. This is a kid-friendly website so please refrain from posting obscene comments.
+            </div>
+            <div class="col">
+                <h3>Main Office</h3>
+                <p>Room No. D401 </p><p> BH-2, Bhaskara Hostel</p><p>Netaji Subhash University of Technology</p><p>Dwarka Sector-3, Delhi </p><br><p>PIN CODE: 110078</p>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Teams</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Contact Us</h3>
+                <ul class="social">
+                    <li><img src="./images/fb.png" alt="" srcset=""></li>
+                    <li><img src="./images/insta.png" alt="" srcset=""></li>
+                    <li><img src="./images/twitter.png" alt="" srcset=""></li>
+                    <li><img src="./images/mail-account.png" alt="" srcset=""></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Mangadex &copy; 2023 - All Rights Reserved</p>
+    </div>
+</body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .footer{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        margin-bottom: 0%;
+        background: grey;
+        padding: 50px 0px 30px;
+        border-top-left-radius: 125px;
+        font-size: 13px;
+        line-height: 20px;
+
+    }
+    .row{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .col{
+        flex-basis: 25%;
+        padding: 10px;
+    }
+     .col:nth-child(3), .col:nth-child(4){
+        flex-basis: 20%;
+    }
+    .col h3{
+        width: fit-content;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    ul.links li{
+        list-style: none;
+        margin-bottom: 12px;
+    }
+    ul.links li a{
+        text-decoration: none;
+        color: black;
+    }
+    ul.social li{
+        width: 40px;
+        height: 40px;
+        border: none;
+        display: inline-block;
+        list-style: none;
+        /* border-radius: 50%; */
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        /* background: white; */
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    hr{
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid;
+        margin : 20px auto;
+    }
+    .copyright{
+        text-align: center;
+    }
+</style>

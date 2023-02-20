@@ -4,14 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login now</title>
+    <title>Login | MangaHub</title>
 </head>
 <body>
-    <h1>Login to your account now</h1>
-    <form action="/login" method="post">
-        <input type="text" name="uname" placeholder="username"><br><br>
-        <input type="password" name="pass" placeholder="password"><br><br>
-        <input type="submit" value="submit">
-    </form>
+    <div class="box">
+    <div class="container">
+        <h1>Login to your account</h1>
+        <form action="/login" method="post">
+            <input type="text" name="uname" placeholder="username" required>
+            <input type="password" name="pass" placeholder="password" required>
+            <button type="submit">LogIn</button>
+        </form>
+        <div class="bottom">
+            <label><a id="signup" href="">Don't Have an Account? SignUp Here !!</a></label>
+        </div>
+    </div>
+    </div>
+
 </body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: cursive,sans-serif;
+    }
+    body{
+        background-image: url("wall2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .box{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: right;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container{
+        width: 350;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px 15px;
+    }
+    h1{
+        color: black;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+    }
+    input{
+        display: block;
+        height: 40px;
+        width: 87%;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        color: black;
+        background: rgba(255,255,255,0.5);
+        padding-left: 10px;
+        margin: 20px;
+    }
+    button{
+        border: none;
+        margin-left: 125px;
+        border-radius: 30px;
+        outline: none;
+        font-size: 15px;
+        height: 45px;
+        width: 100px;
+        cursor: pointer;
+        background:rgba(255, 255, 255, 0.5);
+        transition: .5s;
+    }
+    button:hover{
+        box-shadow: 1px 5px 7px 1px rgba(255, 255, 255, 0.8) ;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    label{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        font-size: small;
+        margin-top: 10px;
+    }
+    a{
+        color :#000;
+        text-decoration: none;
+    }
+</style>
+<script>
+    document.getElementById("signup").addEventListener("click",function signup(){
+        window.open("signup","_blank")
+    })
+</script>
 </html>

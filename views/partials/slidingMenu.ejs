@@ -1,0 +1,55 @@
+<body>
+    <div id="Sidebar">
+        <div id="toggle-btn" onclick="show()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>About</li>
+            <li>Home</li>
+        </ul>
+    </div>
+</body>
+<style>
+    #Sidebar{
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        /* display: inline-block; */
+        background: grey;
+        left: -300px;
+        transition: .5s;
+    }
+    #Sidebar ul li{
+        list-style: none;
+        color: black;
+        font-size: 20px;
+        padding: 20px 24px;
+    }
+    /* #toggle-btn{
+        left: 0px;
+    } */
+    #Sidebar.active{
+        left: 0px;
+    }
+    #toggle-btn{
+        position: absolute;
+        top: 30px;
+        left: 330px;
+
+    }
+    #toggle-btn span{
+        width: 35px;
+        height: 4px;
+        background: black;
+        display: block;
+        margin-top: 4px;
+
+    }
+</style>
+<script>
+    function show(){
+        document.getElementById("Sidebar").classList.toggle('active')
+    }
+</script>

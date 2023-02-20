@@ -1,0 +1,69 @@
+<body>
+    
+    <nav>
+        <label id="home" class = "logo">MangaHub</label>
+        
+        <ul>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">Most Popular</a></li>
+            <li><a href="#">Tags</a></li>
+            <li><a id="login" href="#">LogIn</a></li>
+        </ul>
+    </nav>
+</body>
+<style>
+    *{
+        padding : 0;
+        margin : 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: cursive, sans-serif;
+    }
+    nav{
+        background: #0082e6;
+        height: 80px;
+        width: 100%;
+    }
+    label.logo{
+        color: azure;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+    }
+    nav ul{
+        float : right;
+        margin-right: 20px;
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+    }
+    nav ul li a{
+        color: azure;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        text-transform: uppercase;
+        border-radius: 3px;
+    }
+    a.active,a.hover{
+        background: #1b9bff;
+        transition: .5s;
+    }
+    #home{
+        cursor: pointer;
+    }
+</style>
+<script>
+    document.getElementById("login").addEventListener("click",function login(){
+        window.location.assign("login")
+    })
+    document.getElementById("home").addEventListener("click",()=>{
+        window.location.assign("/")
+    })
+</script>
