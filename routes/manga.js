@@ -8,7 +8,7 @@ const fs = require('fs')
 // require('dotenv').config()
 
 const PORT = process.env.PORT || 3000
-const CompassURI = "mongodb://localhost:27017/uploads"
+const CompassURI = process.env.MongoURI
 
 
 const router= express.Router()
