@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MangaHub</h1>
+    <br><hr>
+    <!-- chapter is parsed -->
+    <%chapter.forEach((page)=>{%>
+        <div>
+            <img src="/uploads/<%=page.image.path%>" alt="" width="70%">
+        </div>
+    <%})%>
+    <div>
+        
+        <%if(notStart){%>
+        <a href="c<%=chapter[0].ChapterNo-1%>"><button id="prev">Prev</button></a>
+        <%}%>
+        <%if(notEnd){%>
+        <a href="c<%=chapter[0].ChapterNo+1%>"><button id="next">Next</button></a>
+        <%}%>
+    </div>
+</body>
+<script>
+    
+    // code to enable page switching using keyboard input
+    document.addEventListener('keydown',(event)=>{
+        
+        if((event.ctrlKey || event.metaKey) && event.key === 'ArrowLeft'){
+            document.getElementById('prev').click()
+        }
+        if((event.ctrlKey || event.metaKey) && event.key === 'ArrowRight'){
+            // console.log(`clicked`)
+            document.getElementById('next').click()
+        }
+    })
+</script>
+</html>

@@ -22,10 +22,18 @@
                 <option>Other</option>
             </datalist>
             <input type="text" name="username" placeholder="Unique Username" required>
-            <input type="text" name="password" placeholder="Password" required>
-            <input type="text" name="cpassword" placeholder="Confirm the Password" required>
+            <input type="password" name="pass" placeholder="Password" required>
+            <input type="password" name="cpass" placeholder="Confirm the Password" required>
             <button type="submit">SignUp</button>
         </form>
+        <div class="errorBox">
+            <% if(usernameExists){ %>
+                <p>This username is already taken. Please enter a new one ...</p>
+            <% } %>
+            <% if(diffPass){%>
+                <p>Your passwords are not matching. Please enter the same  password correctly.</p>
+            <%}%>
+        </div>
     </div>
     
 </body>
@@ -42,7 +50,7 @@
         flex-direction: column;
         align-items: center; */
         
-        background-image: url("wall0.jpg");
+        background-image: url("images/wall0.jpg");
         background-size: cover;
         /* backdrop-filter: blur(1.5px); */
         /* -webkit-filter: blur(3px); */

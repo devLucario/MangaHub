@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Uploading</title>
+</head>
+
+<body>
+	<h1>To Upload Image on mongoDB</h1>
+	<hr>
+	<div>
+		<form action="manga/upload" method="POST" enctype="multipart/form-data">
+			<div>
+				<label for="MangaName">Name of the Manga</label>
+				<input type="text" name="MangaName" placeholder="MangaName" required>
+			</div>
+			<div>
+				<label for="ChapterNo">Chapter number</label>
+				<input type="number" name="ChapterNo" placeholder="should only be a number" required>
+			</div>
+			<div>
+				<label for="name">Name of the chapter</label>
+				<input type="text" id="name" placeholder="Chapter Name"
+					value="" name="name" required>
+			</div>
+			<div>
+				<label for="images">Upload Image</label>
+				<input type="file" id="images"
+					name="images" value="" multiple required>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+
+	<hr>
+
+	<h1>Uploaded Images</h1>
+	<div>
+		<% items.forEach((image)=> { %>
+		
+			<div class="img-display">
+				<img src="/uploads/<%=image.image.path%>" alt="Image of <%= image.ChapterName%>"
+				 height="300">
+				
+				<br>
+				<!-- <img src="data:image/png;base64, -->
+				<!-- <%=image.image.data%>.toString('base64)" alt="from db" width="50" height="80"> -->
+				<div>
+					<h5><%= image.ChapterName %></h5>
+
+				</div>
+			</div>
+		
+		<% }) %>
+	</div>
+</body>
+<style>
+	.img-display{
+		display: flex;
+		align-self: center;
+		align-items: center;
+	}
+	img{
+		align-self: center;
+	}
+</style>
+</html>

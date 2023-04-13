@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- manga is passed in the file -->
+    <h1><%=manga.MangaName%></h1>
+    <img src="/uploads/<%=manga.Icon.path%>" alt="" height="300">
+    <h4>Author : <%=manga.Author%></h4>
+    <h4>Genre : <%=manga.Genre%></h4>
+    <h4>Summary : </h4><br>
+    <p><%=manga.Description%></p>
+    <br><br>
+    <h4>Chapters are : </h4>
+    <ul>
+    <%manga.Chapters.forEach((chapterNo)=>{%>
+        <li><a href="<%=manga.MangaName%>/c<%=chapterNo%>">Chapter <%=chapterNo%></a></li>
+    <%})%>
+    </ul>
+</body>
+</html>

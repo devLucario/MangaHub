@@ -1,0 +1,31 @@
+
+<body>
+    
+    <div class="content">
+        
+        <%items.forEach((manga)=>{%>
+          <div class="individual-manga">
+            <div class="manga-link">
+              <img src="/uploads/<%=manga.Icon.path%>" alt="Image of <%= manga.MangaName%>"
+                       height="300">
+              <a href="/manga/<%=manga.MangaName%>"><h4><%=manga.MangaName%></h4></a>
+              <!-- <a href="https://www.google.com">hi</a> -->
+            </div>
+            
+          </div>
+          <%})%>
+    
+      </div>
+</body>
+<style>
+.content{
+    display: flex;
+    align-items: center;
+}
+</style>
+<script>
+  // document.getElementsByClassName("manga-link").addEventListener("click",function signup(){
+  //   window.open("signup","_blank")
+  // })
+
+</script>
