@@ -1,6 +1,5 @@
 const express = require("express")
 const mongoose = require("mongoose")
-// const bodyParser = require("body-parser")
 const multer = require("multer")
 const imagemodels = require("../models/imageModel")
 const mangaModel = require("../models/mangaModel")
@@ -12,11 +11,6 @@ const CompassURI = process.env.MongoURI
 
 
 const router= express.Router()
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: true }))
-// app.set("view engine",'ejs')
-// app.use(express.static('public'))
-
 
 mongoose.connect(CompassURI).then(()=>{
     console.log(`MongoDB connected`)
