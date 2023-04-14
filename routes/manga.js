@@ -5,7 +5,7 @@ const multer = require("multer")
 const imagemodels = require("../models/imageModel")
 const mangaModel = require("../models/mangaModel")
 const fs = require('fs')
-// require('dotenv').config()
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3000
 const CompassURI = process.env.MongoURI

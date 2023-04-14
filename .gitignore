@@ -1,7 +1,10 @@
+.vscode
+mongoData
 node_modules
 .env
 mongopass.txt
-.vscode
-try.js
+
 progress.txt
-package-lock.json
+signup_info.csv
+try.js
+src/try.js
